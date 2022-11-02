@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <form method="post">
+    {% csrf_token %}
+        <h3>are you sure you want to delete {{ object }}</h3>
+      <a href="{% url 'user_account' %}"> Go back </a>
+      <input type="submit" value="delete">
+    </form>
+
+
+
+
+{% endblock %}
